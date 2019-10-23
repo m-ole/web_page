@@ -27,7 +27,7 @@ body, ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: none;
+    flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -73,6 +73,7 @@ header ul {
     box-shadow: 0 0 5px 2px #00000042;
     padding: 15px;
     border-radius: 5px;
+    min-height: 1350px;
 }
 
 #sidebar ul li a {
@@ -103,19 +104,6 @@ header ul {
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 5px;
-    color: grey;
-}
-
-.product p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
-
-.product span {
-    color: red;
 }
 
 .product:hover {
@@ -138,14 +126,6 @@ header ul {
 
 .product h2 {
     margin: 0 0 15px 0;
-    color: grey;
-    font-weight: normal;
-}
-
-.product h2:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    
 }
 
 .p-bottom {
@@ -181,17 +161,17 @@ footer a {
     color: white;
 }
 
-footer .container > div {
-    min-width: 260px;
-    width: 100%;
-}
 
+footer h3 {
+    margin: 0 0 15px 0;
+}
 footer .container {
     align-items: flex-start;
 }
 
-footer h3 {
-    margin: 0 0 15px 0;
+footer .container < div {
+    min-width: 260px;
+    width: 100%;
 }
 
 
@@ -209,19 +189,15 @@ footer h3 {
     flex-direction: column;
 }
 
-.form-subscribe input {
+.form-subscribe {
     margin-bottom: 15px;
     height: 30px;
     padding: 5px;
-    border-radius: 5px;
 }
 .form-subscribe button {
     background: #247cc1;
     border: none;
     padding: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
 
 }
 
@@ -230,9 +206,8 @@ footer h3 {
     display: block;
     font-size: 20px;
 }
-
 .social-links {
-    padding-left: 100px;
+    padding: 100px;
 }
 
 
@@ -242,26 +217,7 @@ footer h3 {
         }
 }
 
-@media (max-width: 830px) {
-
-    footer > div.container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    footer > div.container > div {
-        text-align: center;
-        padding-left: 0;
-        margin-bottom: 15px;
-    } 
-}
-
 @media (max-width: 725px) {
-
-    #sidebar, #content {
-        min-height: auto;
-
     header .container {
         flex-wrap: wrap;
         justify-content: center;
@@ -289,6 +245,7 @@ footer h3 {
 
     #sidebar {
         width: 100%;
+
     }
     #content {
         width: 100%;
